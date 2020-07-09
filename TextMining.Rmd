@@ -31,3 +31,17 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+## Text Mining: Tokenization
+
+- Variables are columns
+- Observations are rows
+- Each type of observational unit is a table
+
+Tidytable is a table with one-token-per-row.
+
+Token is usually a single word, sentence or paragraph that is a "meaningful
+unit of text"
+
+The key is to *keep* the words that matter!
