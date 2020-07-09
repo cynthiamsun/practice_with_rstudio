@@ -45,3 +45,29 @@ Token is usually a single word, sentence or paragraph that is a "meaningful
 unit of text"
 
 The key is to *keep* the words that matter!
+
+## Mini Emily Dickinson Example:
+
+```{r}
+library(knitr)
+library(ggplot2)
+text <- c("Because I could not stop for Death -", 
+          "He kindly stopped for me -",
+          "The Carriage held but just Ourselves -",
+          "and Immortality")
+text
+
+ # make tibble data table
+library(dplyr)
+dickinson_text <- tibble(line = 1:4, text = text)
+
+dickinson_text
+
+# tokenize data, one word per row
+library(tidytext)
+
+dickinson_text %>%
+  unnest_tokens(word, text)
+
+```
+
